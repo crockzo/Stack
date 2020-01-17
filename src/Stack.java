@@ -5,6 +5,7 @@ public class Stack {
     private static int[] a = new int[MAX];
     private static int TOP;
     static {
+        System.out.println("\nSTACK IMPLEMENTATION");
         TOP = -1;
     }
     private static Scanner scan = new Scanner(System.in);
@@ -12,11 +13,12 @@ public class Stack {
         int choice ;
         boolean flag = true;
         while(flag){
-            System.out.println("\nENTER OPTION : ");
-            System.out.println("1 : INSERT ");
+
+            System.out.println("\n1 : INSERT ");
             System.out.println("2 : READ");
             System.out.println("3 : DELETE");
             System.out.println("4 : EXIT");
+            System.out.print("\nENTER OPTION : ");
             choice = scan.nextInt();
             switch (choice){
                 case 1: insertElement();
@@ -45,7 +47,7 @@ public class Stack {
     }
 
     private static void readStack(){
-        System.out.println("*** STACK ***");
+        System.out.println("\n*** STACK ***");
         for(int i = 0 ; i <= TOP ; i++ ){
             System.out.print(a[i] + " \t");
         }
@@ -55,7 +57,7 @@ public class Stack {
         if(TOP == -1){
             System.out.println("UNDER FLOW");
         }else{
-            System.out.println(a[TOP] + " IS DELETED FROM THE STACK");
+            System.out.println("\n" + a[TOP] + " IS DELETED FROM THE STACK");
             TOP = TOP - 1;
         }
     }
